@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="head_bar">
+        <h1>Bookshelf App</h1>
+    </header>
+
+    <main>
+        <section class="input_and_search">
+            <div class="search_section">
+                <h2>Cari Buku</h2>
+                <form id="searchBook">
+                    <div class="input">
+                        <label for="searchBookTitle">Judul Buku</label>
+                        <input type="text" id="searchBookTitle" class="input">
+                    </div>
+                    <button type="submit"><span>Cari</span></button>
+                </form>
+            </div>
+        
+            <div class="input_section">
+                <h2>Input Buku Baru</h2>
+                <form id="inputBook">
+                    <div class="input">
+                        <label for="inputBookTitle">Judul</label>
+                        <input type="text" id="inputBookTitle" class="input" required>
+                    </div>
+                    <div class="input">
+                        <label for="inputBookAuthor">Penulis</label>
+                        <input type="text" id="inputBookAuthor" class="input" required>
+                    </div>
+                    <div class="input">
+                        <label for="inputBookYear">Tahun</label>
+                        <input type="number" id="inputBookYear" class="input" required>
+                    </div>
+                    <div class="input_inline">
+                        <input type="checkbox" id="inputBookIsComplete" class="input">
+                        <label for="inputBookIsComplete">Selesai dibaca</label>
+                    </div>
+                    <button type="submit"><span>Submit</span></button>
+                </form>
+            </div>
+        </section>
+
+        <div class="book_shelf">
+          <h2>Belum Selesai Dibaca</h2>
+          <div id="incompleteBookshelfList" class="book_list">
+              <p>Belum ada buku.</p>
+          </div>
+      </div>
+      <div class="book_shelf">
+          <h2>Selesai Dibaca</h2>
+          <div id="completeBookshelfList" class="book_list">
+              <p>Belum ada buku.</p>
+          </div>
+      </div>
+    </main>
+
+    <footer>
+        &copy; 2024 Bookshelf App. All rights reserved.
+    </footer>
+
+    <div id="notification-container"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>

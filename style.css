@@ -1,0 +1,383 @@
+/* Gaya umum dan reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    background-color: cornflowerblue;
+    text-align: center;
+    font-weight: bold;
+}
+
+body, input, button {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+input, button {
+    font-size: 16px;
+}
+
+/* Gaya header */
+.head_bar {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: cornflowerblue;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya konten utama */
+main {
+    max-width: 1200px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Gaya bagian input dan pencarian */
+.input_and_search {
+    display: flex;
+    gap: 20px;
+}
+
+.input_section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search_section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding:  20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; 
+    max-width: 400px; 
+    max-height: 200px;
+    margin: 0 auto; 
+}
+
+.input_section > h2, .search_section > h2 {
+    text-align: center;
+    color: cornflowerblue;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.input_section > form > .input, .search_section > form > .input {
+    margin: 8px 0;
+}
+
+.input_section > form > button, .search_section > form > button {
+    background-color: cornflowerblue;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, opacity 0.3s;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.input_section > form > button:hover, .search_section > form > button:hover {
+    background-color: darkblue;
+    transform: translateY(-2px);
+}
+
+.input_section > form > button > span {
+    font-weight: bold;
+}
+
+.input_section > form > .input > input, .search_section > form > .input > input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.input_section > form > .input > label, .search_section > form > .input > label {
+    color: cornflowerblue;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Gaya rak buku */
+.book_shelf {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.book_shelf > h2 {
+    color: cornflowerblue;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.book_shelf > .book_list {
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    min-height: 100px; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.book_shelf > .book_list.empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ccc;
+    font-style: italic;
+}
+
+.book_item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book_item h3 {
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #24231e; 
+  }
+  
+  .book_item p {
+    margin-bottom: 3px;
+    font-size: 1.1rem;
+    color: #356335; 
+  }
+
+.book_item > .action {
+    display: flex;
+    justify-content: flex-end; 
+    gap: 8px;
+}
+
+.book_item > .action > button {
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.3s ease, background-color 0.3s ease;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.book_item > .action > .green {
+    background-color: darkgreen;
+    color: white;
+}
+
+.book_item > .action > .green:hover {
+    background-color: green;
+}
+
+.book_item > .action > .blue {
+    background-color: lightblue;
+    color: black;
+}
+
+.book_item > .action > .blue:hover {
+    background-color: deepskyblue;
+    color: white;
+}
+
+.book_item > .action > .red {
+    background-color: darkred;
+    color: white;
+}
+
+.book_item > .action > .red:hover {
+    background-color: red;
+}
+
+.book_item > .action > button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Gaya untuk form edit */
+#editBookForm {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 320px; 
+    max-width: 90%; 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    font-family: 'Roboto', sans-serif; 
+}
+
+#editBookForm .input {
+    margin: 10px 0; 
+}
+
+#editBookForm button {
+    margin-top: 16px; 
+    background-color: cornflowerblue;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    padding: 12px 20px; 
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.3s, transform 0.2s, opacity 0.3s;
+}
+
+#editBookForm button:hover {
+    background-color: darkblue;
+    transform: translateY(-2px);
+}
+
+#editBookForm .red {
+    background-color: darkred;
+    color: white;
+    margin-right: 10px;
+}
+
+/* Gaya untuk notifikasi */
+.notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    opacity: 1;
+    transition: opacity 2s ease-out;
+}
+
+.notification-green {
+    background-color: #4caf50;
+    color: white;
+}
+
+.notification-red {
+    background-color: #f44336;
+    color: white;
+}
+
+.notification-blue {
+    background-color: #2196f3;
+    color: white;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Media query untuk responsivitas */
+@media screen and (max-width: 600px) {
+    main {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .input_and_search {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search_section {
+        max-width: 100%; /* Memanfaatkan lebar maksimum */
+    }
+
+    .book_shelf > .book_list {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .book_item {
+        padding: 8px;
+    }
+
+    .book_item h3 {
+        font-size: 1.2rem;
+    }
+
+    .book_item p {
+        font-size: 1rem;
+    }
+
+    .book_item > .action > button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .head_bar {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .input_section > h2, .search_section > h2 {
+        font-size: 20px;
+    }
+
+    #editBookForm {
+        width: 90%; 
+        max-width: 320px; 
+        padding: 12px;
+        top: unset; 
+        left: unset; 
+        transform: unset; 
+        margin: 20px auto; 
+        position: static; 
+    }
+
+    #editBookForm button {
+        width: 100%; 
+    }
+    .notification {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
